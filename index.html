@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Favourite Recipe</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Amita|Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section id="header">
+    	<h1><strong>Bacon and Broccoli Risotto</strong></h1>
+    	<p><em>"Creamy risotto with crisp bacon and tender broccoli. Plate the risotto and add one raw egg yolk to each serving if desired, allowing the diner to break the yolk and stir into the rice."</em></p>
+    </section>
+    <article class="container">
+    	<h2>Ingredients</h2>
+   		<button id="i-reset">Reset checklist</button>
+    	<ul class="l-grid l-style">
+    		<div class="half-container list-one">
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>1/2 pound bacon, diced</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>5 cups chicken stock</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>2 tablespoons butter</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>1/2 onion, diced</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>4 cloves garlic, minced</li>
+    			</span>
+    		</div>
+    		<div class="half-container list-two">
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>1 1/2 cups Arborio rice</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>2 tablespoons butter</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>1/4 cup grated Parmesan cheese</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>salt and black pepper to taste</li>
+    			</span>
+    			<span class="list-border">
+    				<li><span class="checkmark"></span><span class="balloon"></span>1 head broccoli</li>
+    			</span>
+    		</div>
+    	</ul>
+    	<h3>Directions</h3>
+    	<label><input type="checkbox" id="image-checkbox" value="image-checkbox" checked> Images visibility</label>
+    	<button id="d-reset">Reset checklist</button>
+    	<ul class="l-grid">
+    		<div class="image">
+    			<img src="Browned_bacon.png" />
+    			<span class="l-group">
+    				<li>Cook and stir the diced bacon in a large skillet over medium heat until browned, about 10 minutes. Drain the bacon and reserve.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>1</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Steam_broccoli.jpg" />
+    			<span class="l-group">
+    				<li>Steam broccoli in a pot.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>2</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Chicken_stock_boiling.png" />
+    			<span class="l-group">
+    				<li>Bring the chicken stock to a boil in a saucepan over high heat; reduce heat to low to keep the chicken stock hot.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>3</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Onion_garlic_butter_cooking.png" />
+    			<span class="l-group">
+    				<li>Heat 2 tablespoons butter in a large, heavy-bottomed saucepan over medium-high heat. Add the onion and garlic; cook and stir until the onion begins to turn golden brown at the edges, about 2 minutes.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>4</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Arborio_rice_toasting.png" />
+    			<span class="l-group">
+    				<li>Pour in the rice and stir until the rice is coated in butter and has started to toast, 2 to 3 minutes.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>5</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Stir_broth_in_rice.png" />
+    			<span class="l-group">
+    				<li>Reduce heat to medium; stir in 1/3 of the chicken stock and continue stirring until the rice has absorbed the liquid and turned creamy. Repeat this process twice more. It should take about 20 minutes. When finished, the rice should be tender, yet slightly firm.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>6</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Butter_on_rice.png" />
+    			<span class="l-group">
+    				<li>Remove the risotto from the heat and stir in the remaining 2 tablespoons of butter.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>7</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Bacon_on_rice.png" />
+    			<span class="l-group">
+    				<li>Stir in the Parmesan cheese, and the reserved bacon and broccoli.</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>8</p>
+    				</div>
+    			</span>
+    		</div>
+    		<div class="image">
+    			<img src="Pepper_seasoning_risotto.png" />
+    			<span class="l-group">
+    				<li>Season to taste with salt and pepper before serving. Enjoy!</li>
+    				<div class="drawing">
+    					<span></span>
+    					<p>3</p>
+    				</div>
+    			</span>
+    		</div>
+    	</ul>
+    </article>
+  </body>
+</html>
