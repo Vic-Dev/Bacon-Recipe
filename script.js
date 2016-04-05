@@ -1,8 +1,7 @@
 $(document).ready(function(){
 	$('.checkmark').hide();
 	$('.list-one .list-border:first-child').addClass('highlight');
-	$('.image:first-child').addClass('d-highlight');
-	$('.image:first-child').addClass('grow');
+	$('.image:first-child').addClass('d-highlight grow');
 	$('.image:first-child .l-group').addClass('dark');
 	function mouseOver() {
 		$(this).find('.balloon').addClass('balloon-active');
@@ -61,32 +60,54 @@ $(document).ready(function(){
 	// Directions Check Off
 
 	$('.image:first-child').click(function(){
-		$(this).find('p').hide();
-		$(this).find('.drawing span').addClass('big-checkmark');
-		$(this).find('.drawing').css('opacity', 1);
-		$(this).find('.l-group').css('background-color', 'rgba(0,0,0,0.4)');
-		$(this).removeClass('d-highlight');
-		$(this).removeClass('grow');
-		$(this).find('.l-group').removeClass('dark');
-		$(this).next().addClass('d-highlight');
-		$(this).next().addClass('grow');
-		$(this).next().find('.l-group').addClass('dark');
-		$(this).css('pointer-events', 'none');
+		$(this)
+			.find('p')
+				.hide()
+			.end()
+			.find('.drawing span')
+				.addClass('big-checkmark')
+			.end()
+			.find('.drawing')
+				.css('opacity', 1)
+			.end()
+			.find('.l-group')
+				.css('background-color', 'rgba(0,0,0,0.4)')
+				.removeClass('dark')
+			.end()
+			.removeClass('d-highlight grow')
+			.css('pointer-events', 'none')
+			.next()
+				.addClass('d-highlight grow')
+			.end()
+			.next()
+				.find('.l-group')
+					.addClass('dark');
 	});
-
+ 
 	$('.image').click(function(){
 		if ($(this).prev().find('p').css('display') == 'none') {
-			$(this).find('p').hide();
-			$(this).find('.drawing span').addClass('big-checkmark');
-			$(this).find('.drawing').css('opacity', 1);
-			$(this).find('.l-group').css('background-color', 'rgba(0,0,0,0.4)');
-			$(this).removeClass('d-highlight');
-			$(this).removeClass('grow');
-			$(this).find('.l-group').removeClass('dark');
-			$(this).next().addClass('d-highlight');
-			$(this).next().addClass('grow');
-			$(this).next().find('.l-group').addClass('dark');
-			$(this).css('pointer-events', 'none');
+			$(this)
+				.find('p')
+					.hide()
+				.end()
+				.find('.drawing span')
+					.addClass('big-checkmark')
+				.end()
+				.find('.drawing')
+					.css('opacity', 1)
+				.end()
+				.find('.l-group')
+					.css('background-color', 'rgba(0,0,0,0.4)')
+					.removeClass('dark')
+				.end()
+				.removeClass('d-highlight grow')
+				.css('pointer-events', 'none')
+				.next()
+					.addClass('d-highlight grow')
+				.end()
+				.next()
+					.find('.l-group')
+						.addClass('dark');
 		}
 	});
 
@@ -100,25 +121,27 @@ $(document).ready(function(){
 
 	$('#i-reset').click(function(){
 		$('.checkmark').hide();
-		$('.list-one .list-border').removeClass('highlight');
+		$('.list-one .list-border').removeClass('highlight')
+			.css('pointer-events', 'auto');
 		$('.list-one .list-border:first-child').addClass('highlight');
-		$('.list-one .list-border').css('pointer-events', 'auto');
-		$('.list-two .list-border').removeClass('highlight');
-		$('.list-two .list-border').css('pointer-events', 'auto');
+		$('.list-two .list-border').removeClass('highlight')
+			.css('pointer-events', 'auto');
 		$('.balloon').css('opacity', 0.5);
 		$('.list-border').hover(mouseOver, mouseOut);
 	});
 
 	// Reset Directions Checklist
+	// does not reset opacity of balloon on hover - fix later
 
-	// not complete - keep working on this
 	$('#d-reset').click(function(){
 		$('.image p').show();
 		$('.drawing span').removeClass('big-checkmark');
 		$('.drawing').css('opacity', 0.8);
 		$('.l-group').css('background-color', '');
-		$('.image:first-child').addClass('d-highlight');
-		$('.image:first-child').addClass('grow');
+		$('.image').removeClass('d-highlight grow')
+			.css('pointer-events', 'auto');;
+		$('.image .l-group').removeClass('dark');
+		$('.image:first-child').addClass('d-highlight grow');
 		$('.image:first-child .l-group').addClass('dark');
 	});
 
