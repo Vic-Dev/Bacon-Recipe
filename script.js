@@ -37,7 +37,6 @@ $(document).ready(function(){
 
 	$('.list-two .list-border:first-child').click(function(){
 		if ($('.list-one .list-border:last-child').find('.checkmark').css('display') != 'none') {
-			console.log("hi");
 			$(this).find('.checkmark').show();
 			$(this).find('.balloon').css('opacity', 1);
 			$(this).removeClass('highlight')
@@ -48,7 +47,6 @@ $(document).ready(function(){
 
 	$('.list-two .list-border:not(:first-child)').click(function(){
 		if ($(this).prev().find('.checkmark').css('display') != 'none') {
-			console.log("hhhmmmm");
 			$(this).find('.checkmark').show();
 			$(this).find('.balloon').css('opacity', 1);
 			$(this).removeClass('highlight')
